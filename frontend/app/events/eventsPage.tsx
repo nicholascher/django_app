@@ -8,27 +8,26 @@ export default function EventsPage() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.contentContainer}>
-        <Text style={styles.header}>Event Details</Text>
-        <View style={styles.infoContainer}>
-          <Text style={styles.label}>Event ID:</Text>
-          <Text style={styles.info}>{id}</Text>
+        <View style={styles.contentContainer}>
+            <Text style={styles.header}>Event Details</Text>
+            <View style={styles.infoContainer}>
+            </View>
+            <View style={styles.infoContainer}>
+            <Text style={styles.label}>Title:</Text>
+            <Text style={styles.info}>{title}</Text>
+            </View>
+            <View style={styles.infoContainer}>
+            <Text style={styles.label}>Description:</Text>
+            <Text style={styles.info}>{description}</Text>
+            </View>
+            <Button
+            title="Back"
+            onPress={() => router.back()}
+            color="#007BFF" 
+            />
         </View>
-        <View style={styles.infoContainer}>
-          <Text style={styles.label}>Title:</Text>
-          <Text style={styles.info}>{title}</Text>
-        </View>
-        <View style={styles.infoContainer}>
-          <Text style={styles.label}>Description:</Text>
-          <Text style={styles.info}>{description}</Text>
-        </View>
-        <Button
-          title="Go Back"
-          onPress={() => router.back()}
-          color="#007BFF" 
-        />
-      </View>
     </SafeAreaView>
+
   );
 }
 
@@ -59,8 +58,8 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 16,
-    fontWeight: '500',
-    color: '#555', 
+    fontWeight: 'bold',
+    color: '#444', 
   },
   info: {
     fontSize: 16,

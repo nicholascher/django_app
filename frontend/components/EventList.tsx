@@ -15,13 +15,13 @@ const EventList = () => {
 
     const handlePress = (id: string, title: string, description: string) => {
         router.push({
-            pathname: `/eventsPage`,
+            pathname: '/events/eventsPage',
             params: { id, title, description}
         });
     };
 
     const renderItem = ({ item }: { item: EventItemProps }) => {
-        return <EventItem id={item.id.toString()} title={item.title} description={item.description} onPress={() => handlePress(item.id.toString(), item.title, item.description)}/>;
+        return <EventItem id={item.id.toString()} title={item.title} description={item.description} onPress={handlePress}/>;
     };
       
     return (

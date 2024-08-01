@@ -5,33 +5,38 @@ interface EventItemProps {
   id: string;
   title: string;
   description: string;
-  onPress: (id: string, title:string, description: string) => void; 
+  onPress: (id: string, title: string, description: string) => void;
 }
 
-const EventItem: React.FC<EventItemProps> = ({ id, title, description, onPress }) => {
+const EventItem: React.FC<EventItemProps> = ({
+  id,
+  title,
+  description,
+  onPress,
+}) => {
   return (
-    <TouchableOpacity style={styles.itemContainer} onPress={() => onPress(id, title, description)}>
+    <TouchableOpacity
+      style={styles.itemContainer}
+      onPress={() => onPress(id, title, description)}
+    >
       <Text style={styles.title}>{title}</Text>
-      <Text style={styles.description}>{description}</Text>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   itemContainer: {
-    padding: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
-    marginBottom: 10,
-    backgroundColor: '#fff', 
+    borderWidth:1, 
+    borderColor: '#c5c5c5', 
+    borderRadius: 20, 
+    marginVertical: 5, 
+    padding: 30, 
+
   },
   title: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  description: {
-    fontSize: 14,
-    color: '#666',
+    fontSize: 20,
+    fontWeight: "600",
+    color: "#333", 
   },
 });
 
