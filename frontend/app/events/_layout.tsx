@@ -10,7 +10,17 @@ export default function EventsLayout() {
         }}
       />
       <Stack.Screen 
-      name="eventsPage" 
+      name="eventsPage"
+      options={{ 
+        headerShown:false
+      }} />
+      <Stack.Screen 
+      name="editEventsPage" 
+      options={{ 
+        headerShown:false
+      }} />
+      <Stack.Screen 
+      name="addEventsPage" 
       options={{ 
         headerShown:false
       }} />

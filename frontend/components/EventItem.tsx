@@ -3,23 +3,25 @@ import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
 interface EventItemProps {
   id: string;
-  title: string;
+  name: string;
   description: string;
-  onPress: (id: string, title: string, description: string) => void;
+  date: string;
+  onPress: (id: string, name: string, description: string, date: string) => void;
 }
 
 const EventItem: React.FC<EventItemProps> = ({
   id,
-  title,
+  name,
   description,
+  date,
   onPress,
 }) => {
   return (
     <TouchableOpacity
       style={styles.itemContainer}
-      onPress={() => onPress(id, title, description)}
+      onPress={() => onPress(id, name, description, date)}
     >
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.name}>{name}</Text>
     </TouchableOpacity>
   );
 };
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
     padding: 30, 
 
   },
-  title: {
+  name: {
     fontSize: 20,
     fontWeight: "600",
     color: "#333", 
