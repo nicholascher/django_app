@@ -46,7 +46,7 @@ const EventList = () => {
                         name={item.name} 
                         description={item.description} 
                         date={currentDate} 
-                        onPress={handlePress}/>;
+                        onPress={handlePress}/>
     };
       
     return (

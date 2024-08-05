@@ -4,14 +4,14 @@ import { useColorScheme } from 'react-native';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { View, Image, StyleSheet } from 'react-native';
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
+import EventsLayout from './events/_layout';
 
 function CustomDrawerContent(props: any) {
   return (
     <DrawerContentScrollView {...props}>
       <View style={styles.logoContainer}>
         <Image
-          source={require('../assets/images/react-logo.png')} // Replace with your logo path
-          style={styles.logo}
+          source={require('../assets/images/react-logo.png')}
           resizeMode="contain"
         />
       </View>
